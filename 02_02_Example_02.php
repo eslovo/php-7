@@ -6,9 +6,10 @@
  * Time: 0:32
  */
 
-
+// setting strict_types
 declare(strict_types =1);
 
+// with strict_types set this will result in a Fatal Error due to incorrect type of params given
 function sum(int $a, int $b){
     echo $a .' '. gettype($a). ' + ';
     echo $b .' '. gettype($b). ' + ';
