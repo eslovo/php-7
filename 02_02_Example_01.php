@@ -7,6 +7,8 @@
  */
 
 
+// old way w. no type declaration in function params
+
 function sum($a, $b){
     echo $a .' '. gettype($a). ' + ';
     echo $b .' '. gettype($b). ' + ';
@@ -18,6 +20,9 @@ sum(2,3); echo '<br/>';
 sum("2", "3"); echo '<br/>';
 sum(2.0, 3.0); echo '<br/>';
 echo '<hr>';
+
+
+// type declaration which converts given params to expected types
 
 function sum2(int $a, int $b){
     echo $a .' '. gettype($a). ' + ';
