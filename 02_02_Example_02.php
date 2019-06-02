@@ -1,6 +1,6 @@
 <?php
 /**
- * Created Lebedev Vitaly
+ * Created by Lebedev Vitaly
  * Email: eslovo@gmail.com
  * Date: 03.06.2019
  * Time: 0:32
