@@ -30,7 +30,7 @@ include_once dirname(__FILE__).'/layout/header.php';
                 <li>array</li>
                 <li>bool</li>
                 <li>float</li>
-                <li>int</li>
+                <li>int</li>clea
                 <li>string</li>
             </ul>
         </li>
