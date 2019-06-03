@@ -5,6 +5,8 @@
  * Date: 02.06.2019 17:19
  */
 
+declare(strict_types=1);
+
 // THIS LIST ALL FILES IN A GIVEN DIRECTORY AND SHAPES HTML WITH ALL OF THEM BUT ITSELF
 
 
@@ -33,7 +35,7 @@ htmlOutput($fileList);
  *  Removing current index file
  *  Shaping array with: filename, dir and url
  */
-function shapeFileList(array $thisDirFiles){
+function shapeFileList(array $thisDirFiles) : array {
 
     $noThisFileArray=[];
 
@@ -64,7 +66,8 @@ function shapeFileList(array $thisDirFiles){
 /*
  * File from Path
  */
-function fileFromPath(string $file){
+
+function fileFromPath(string $file) : string{
     $thisFile = substr($file, strrpos($file, '/') + 1);
     return $thisFile;
 }
@@ -73,7 +76,7 @@ function fileFromPath(string $file){
 /*
  * Shaping URL
  */
-function shapeUrl(string $path){
+function shapeUrl(string $path) : string {
 
     $dirFile =str_replace(  $_SERVER["DOCUMENT_ROOT"], '', $path);
     $url = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$dirFile";
@@ -82,6 +85,9 @@ function shapeUrl(string $path){
 }
 
 
+/*
+ * Generating HTML output
+ */
 function htmlOutput(array $files){
     ?><ul><?php
     foreach($files as $key=>$val){
