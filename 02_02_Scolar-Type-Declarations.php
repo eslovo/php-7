@@ -28,26 +28,25 @@ include_once dirname(__FILE__).'/layout/header.php';
     <p>PHP-7 enables declaration of types of vars in functions. When <strong>strict_type</strong> is set to 0 (the default state) all vars getting converted to predifined type. </p>
 
     <div class="w3-code jsHigh">
-        <strong>declare(strict_type=0);</strong><br/><br/>
 
         function sum(int $a, int $b){<br/>
         &nbsp;&nbsp;&nbsp;echo gettype($a). " " . gettype($b);<br/>
         }<br/>
-        sum(2, 3); // all integer<br/>
-        sum("2", "3") // all integer<br/>
-        sum(2.0, 3.0) // all integer
+        sum(2, 3); // <span class="w3-green">all integer</span><br/>
+        sum("2", "3") // <span class="w3-green">all integer</span><br/>
+        sum(2.0, 3.0) // <span class="w3-green">all integer</span>
     </div>
 
     <p>When <strong>strict_type=1</strong> - PHP throws Errors</p>
         <div class="w3-code jsHigh">
-            <strong>declare(strict_type=1);</strong><br/><br/>
+            <strong class="w3-amber">declare(strict_type=1);</strong><br/><br/>
 
             function sum(int $a, int $b){<br/>
             &nbsp;&nbsp;&nbsp;echo gettype($a). " " . gettype($b);<br/>
             }<br/>
-            sum(2, 3); // all integer<br/>
-            sum("2", "3") // TypeError: Argument must be of the type integer, string given<br/>
-            sum(2.0, 3.0) // TypeError: Argument must be of the type integer, float given
+            sum(2, 3); // <span class="w3-green">all integer</span><br/>
+            sum("2", "3") // <span class="w3-red">TypeError: Argument must be of the type integer, string given</span><br/>
+                sum(2.0, 3.0) // <span class="w3-red">TypeError: Argument must be of the type integer, float given</span>
         </div>
     </div>
 <?php
