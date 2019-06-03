@@ -31,7 +31,7 @@ include_once dirname(__FILE__).'/layout/header.php';
         <strong>declare(strict_type=0);</strong><br/><br/>
 
         function sum(int $a, int $b){<br/>
-        echo gettype($a). " " . gettype($b);<br/>
+        &nbsp;&nbsp;&nbsp;echo gettype($a). " " . gettype($b);<br/>
         }<br/>
         sum(2, 3); // all integer<br/>
         sum("2", "3") // all integer<br/>
@@ -43,7 +43,7 @@ include_once dirname(__FILE__).'/layout/header.php';
             <strong>declare(strict_type=1);</strong><br/><br/>
 
             function sum(int $a, int $b){<br/>
-            echo gettype($a). " " . gettype($b);<br/>
+            &nbsp;&nbsp;&nbsp;echo gettype($a). " " . gettype($b);<br/>
             }<br/>
             sum(2, 3); // all integer<br/>
             sum("2", "3") // TypeError: Argument must be of the type integer, string given<br/>
