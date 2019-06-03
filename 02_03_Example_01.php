@@ -7,8 +7,12 @@
  */
 
 
-/*
- *  Old way with no Return Type Declaration
+/**
+ * Old way with no Return Type Declaration
+ *
+ * @param $a
+ * @param $b
+ * @return mixed
  */
 function sum($a, $b){
     return $a+$b;
@@ -20,9 +24,14 @@ echo gettype(sum(2.0, 3.0)); // double (float)
 
 echo '<br/><hr/><br/>';
 
-/*
+
+/**
  * Coercive Type Declaration
- * (return value gets coerced by PHP to INTEGER
+ * return value gets coerced by PHP to INTEGER
+ *
+ * @param $a
+ * @param $b
+ * @return int
  */
 
 function sum2($a, $b): int {

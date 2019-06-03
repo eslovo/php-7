@@ -9,13 +9,18 @@
 
 declare(strict_types=1);
 
-/*
+/**
  * Strict Type Declaration
  * (return value gets coerced by PHP to INTEGER
+ *
+ * @param $a
+ * @param $b
+ * @return int
  */
 function sum($a, $b): int {
     return $a+$b;
 }
+
 echo gettype(sum(2, 3)); // integer
 echo gettype(sum("2", "3")); // TypeError: Return value of sum() must be of the type int, float returned
 echo gettype(sum(2.0, 3.0)); // TypeError: Return value of sum() must be of the type int, float returned

@@ -7,8 +7,13 @@
  */
 
 
-// old way w. no type declaration in function params
-
+/**
+ * Old way w. no type declaration in function params
+ *
+ * @param $a
+ * @param $b
+ * @return $result
+ */
 function sum($a, $b){
     echo $a .' '. gettype($a). ' + ';
     echo $b .' '. gettype($b). ' + ';
@@ -22,8 +27,12 @@ sum2(2.0, 3.0); echo '<br/>';
 echo '<hr>';
 
 
-// type declaration which converts given params to expected types
-
+/**
+ * Type declaration which converts given params to expected types
+ *
+ * @param int $a
+ * @param int $b
+ */
 function sum2(int $a, int $b){
     echo $a .' '. gettype($a). ' + ';
     echo $b .' '. gettype($b). ' + ';
