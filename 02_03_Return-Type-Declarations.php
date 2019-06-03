@@ -42,9 +42,9 @@ include_once dirname(__FILE__).'/layout/header.php';
             &nbsp;&nbsp;&nbsp;return $a+$b;<br/>
             }<br/>
             <br/>
-            sum gettype((2, 3)); // <span class="w3-blue">integer</span><br/>
-            sum gettype(("2", "3")) // <span class="w3-blue">integer</span> - 'cos math operation cannot be on string and PHP7 converts from string to integer<br/>
-            sum gettype((2.0, 3.0)) // <span class="w3-blue">double (float)</span>
+            echo gettype(sum(2, 3)); // <span class="w3-blue">integer</span><br/>
+            echo gettype(sum("2", "3")) // <span class="w3-blue">integer</span> - 'cos math operation cannot be on string and PHP7 converts from string to integer<br/>
+            echo gettype(sum(2.0, 3.0)) // <span class="w3-blue">double (float)</span>
         </div>
 
         <h2>PHP7 - Coercive type</h2>
@@ -53,9 +53,9 @@ include_once dirname(__FILE__).'/layout/header.php';
             &nbsp;&nbsp;&nbsp;return $a+$b;<br/>
             }<br/>
             <br/>
-            sum gettype((2, 3)); // <span class="w3-green">integer</span><br/>
-            sum gettype(("2", "3")) // <span class="w3-green">integer</span><br/>
-            sum gettype((2.0, 3.0)) // <span class="w3-green">integer</span>
+            echo gettype(sum(2, 3)); // <span class="w3-green">integer</span><br/>
+            echo gettype(sum("2", "3")) // <span class="w3-green">integer</span><br/>
+            echo gettype(sum(2.0, 3.0)) // <span class="w3-green">integer</span>
         </div>
 
         <h2>PHP7 - Strict type declaration</h2>
@@ -65,9 +65,9 @@ include_once dirname(__FILE__).'/layout/header.php';
             &nbsp;&nbsp;&nbsp;return $a+$b;<br/>
             }<br/>
             <br/>
-            sum gettype((2, 3)); // <span class="w3-green">integer</span><br/>
-            sum gettype(("2", "3")) // <span class="w3-green">integer</span><br/>
-            sum gettype((2.0, 3.0)) // <span class="w3-red">TypeError: Return value must be of the type integer, float returned</span>
+            echo gettype(sum(2, 3)); // <span class="w3-green">integer</span><br/>
+            echo gettype(sum("2", "3")) // <span class="w3-green">integer</span><br/>
+            echo gettype(sum(2.0, 3.0)) // <span class="w3-red">TypeError: Return value must be of the type integer, float returned</span>
         </div>
 
     </div>
