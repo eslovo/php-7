@@ -17,7 +17,7 @@ function sum(int $a, int $b){
     echo $result .' '. gettype($result);
 }
 
-sum(2,3); echo '<br/>';
-sum("2", "3"); echo '<br/>';
-sum(2.0, 3.0); echo '<br/>';
+sum2(2,3); echo '<br/>';
+sum2("2", "3"); echo '<br/>';
+sum2(2.0, 3.0); echo '<br/>';
 echo '<hr>';
