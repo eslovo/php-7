@@ -12,7 +12,7 @@ include_once dirname(__FILE__).'/layout/header.php';
 ?>
 
     <div class="w3-container w3-teal">
-        <h1><=> Combine Comparison Operator</h1>
+        <h1>Combine Comparison Operator: <strong><=></strong></h1>
     </div>
 
     <div class="w3-container">
