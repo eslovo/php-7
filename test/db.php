@@ -7,6 +7,18 @@
  */
 
 
+$pms['db.server'] =$dbConn['db.server'];
+$pms['db.host'] =$dbConn['db.host'];
+$pms['db.update'] =$dbConn['db.update'];
+$pms['db.update.login'] =$dbConn['db.update.login'];
+$pms['db.update.pass'] =$dbConn['db.update.pass'];
+
+$encoding ='utf8';
+//$db_update = new PDO($pms['db.server'].':host='.$pms['db.host'].';port=3306;dbname='.$pms['db.update'],$pms['db.update.login'],$pms['db.update.pass'],array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES $encoding"));
+$db_update = new PDO($pms['db.server'].':host='.$pms['db.host'].';dbname='.$pms['db.update'],$pms['db.update.login'],$pms['db.update.pass'],array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES $encoding"));
+$db_update->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
+
+
 if($sb_provID ==$provData['sb_provID']){
 
     try {
