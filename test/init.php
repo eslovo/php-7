@@ -9,6 +9,8 @@
 
   ob_start(); // turn on output buffering
 
+  // Define constants
+  define('CAMT_XML_UPLOAD_DIR', __DIR__.'/upload/xml');
 
   // -> All classes in directory
   foreach(glob('class/*.php') as $file) {

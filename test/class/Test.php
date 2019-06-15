@@ -8,8 +8,10 @@
 
 namespace test\test;
 
+
 class Test implements ITest
 {
+    public $upload_dir;
 
     /**
      * @param string $baz
@@ -18,6 +20,6 @@ class Test implements ITest
 
     public function bar (string $baz) : string
     {
-        return __METHOD__.' got param: '.$baz;
+        return $this->upload_dir.' got param: '.$baz;
     }
 }

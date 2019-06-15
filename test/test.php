@@ -10,5 +10,6 @@ require_once "init.php";
 
 
 $test =new test\test\Test;
+$test->upload_dir = CAMT_XML_UPLOAD_DIR;
 $output =$test->bar(__FILE__);
 echo $output;
